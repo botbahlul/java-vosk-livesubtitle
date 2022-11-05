@@ -58,6 +58,8 @@ The file java-vosk-livesubtitle.exe will be created on same folder of those jar 
 
 Now you can run this app in one single click.
 
+Don't forget to put that models folder in the same folder with java-vosk-livesubtitle.exe!
+
 As usual for best recognizing quality, on windows you will need STEREO MIX or VIRTUAL AUDIO CABLE as RECORDING/INPUT DEVICE 
 ![image](https://user-images.githubusercontent.com/88623122/199527559-e2609d8c-3479-420d-8c52-806fa56a21f4.png)
 ![image](https://user-images.githubusercontent.com/88623122/199528286-1ab77dc4-38a9-41f2-9b92-25db352a1ed2.png)
