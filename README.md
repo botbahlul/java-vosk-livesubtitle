@@ -44,7 +44,6 @@ Don't forget to check Create 64bits executivce to avoid libvosk dll errors
 ![image](https://user-images.githubusercontent.com/88623122/200141628-c37bde19-573f-47d2-876e-b8d7e446a330.png)
 
 Then click Config Internal to set additional compile parameter UTF-8 enconding
-<img width="960" alt="jar2exe-set-64bit" src="https://user-images.githubusercontent.com/88623122/200141642-2e6a970d-6bb8-40ef-aec6-e84316344cb7.png">
 
 Select Custom tab paste this code
 ```
