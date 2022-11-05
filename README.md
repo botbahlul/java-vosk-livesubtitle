@@ -41,9 +41,10 @@ Add all other jar files in that lib folder except that java-vosk-livesubtitle.ja
 <img width="960" alt="jar2exe-add-jar2" src="https://user-images.githubusercontent.com/88623122/200141389-87e3df55-b918-4daf-ac64-5c008aaade6e.png">
 
 Don't forget to check Create 64bits executivce to avoid libvosk dll errors
+![image](https://user-images.githubusercontent.com/88623122/200141628-c37bde19-573f-47d2-876e-b8d7e446a330.png)
 
 Then click Config Internal to set additional compile parameter UTF-8 enconding
-<img width="960" alt="jar2exe-set-utf-8" src="https://user-images.githubusercontent.com/88623122/200141415-5f313c57-c019-4d5c-9a16-8175ced580f4.png">
+<img width="960" alt="jar2exe-set-64bit" src="https://user-images.githubusercontent.com/88623122/200141642-2e6a970d-6bb8-40ef-aec6-e84316344cb7.png">
 
 Select Custom tab paste this code
 ```
