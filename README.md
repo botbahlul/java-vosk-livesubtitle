@@ -26,18 +26,35 @@ jar {
 ```
 
 After Clean And Build with Netbeans, goto that build\distribution folder and extract that zip file.
+
 Then open jar2exe, browse to distributions\java-vosk-livesubtitle\lib folder, select java-vosk-livesubtitle.jar as source that you want to convert to exe
-Set JDK version to 1.8
+<img width="960" alt="jar2exe-browse" src="https://user-images.githubusercontent.com/88623122/200141288-e7c4d2fe-46ea-4b4a-8099-238b5020ff0c.png">
+
+Set JDK version to 1.8.
+<img width="960" alt="jar2exe-set-jdk" src="https://user-images.githubusercontent.com/88623122/200141294-7aae84ac-46c0-4ce9-9246-8ec444814473.png">
+
 Choose Windows GUI Application if you don't want to see any log exception in DOS interface.
+![image](https://user-images.githubusercontent.com/88623122/200141364-a8410c16-305f-40ae-9099-1458f987fba4.png)
+
 Add all other jar files in that lib folder except that java-vosk-livesubtitle.jar that you already set as main source.
+<img width="960" alt="jar2exe-add-jar" src="https://user-images.githubusercontent.com/88623122/200141387-20fc76ff-f236-4137-b52e-f68577114af0.png">
+<img width="960" alt="jar2exe-add-jar2" src="https://user-images.githubusercontent.com/88623122/200141389-87e3df55-b918-4daf-ac64-5c008aaade6e.png">
+
 Don't forget to check Create 64bits executivce to avoid libvosk dll errors
+
 Then click Config Internal to set additional compile parameter UTF-8 enconding
+<img width="960" alt="jar2exe-set-utf-8" src="https://user-images.githubusercontent.com/88623122/200141415-5f313c57-c019-4d5c-9a16-8175ced580f4.png">
+
 Select Custom tab paste this code
 ```
 option -Dfile.encoding=UTF-8
 ```
+<img width="960" alt="jar2exe-set-utf-8" src="https://user-images.githubusercontent.com/88623122/200141423-3975325a-0afc-49db-a334-f8413b845f7a.png">
+
 click Apply, and Next to start compile
+
 The file java-vosk-livesubtitle.exe will be created on same folder of those jar filers (lib folder)
+
 Now you can run this app in single click.
 
 As usual for best recognizing quality, on windows you will need STEREO MIX or VIRTUAL AUDIO CABLE as RECORDING/INPUT DEVICE 
