@@ -10,7 +10,7 @@ The translation part is using self made GoogleTranslateTranslator class
 
 If you want to build this source to an exe file, you will need jar2exe https://www.jar2exe.com/
 
-That build.gradle file must contain these lines :
+That build.gradle file must contain these lines beside other standard tags :
 ```
 jar {
     manifest {
