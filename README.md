@@ -55,7 +55,7 @@ click Apply and OK, then Next to start compile.
 
 The file java-vosk-livesubtitle.exe will be created on same folder of those jar filers (lib folder)
 
-Now you can run this app in single click.
+Now you can run this app in one single click.
 
 As usual for best recognizing quality, on windows you will need STEREO MIX or VIRTUAL AUDIO CABLE as RECORDING/INPUT DEVICE 
 ![image](https://user-images.githubusercontent.com/88623122/199527559-e2609d8c-3479-420d-8c52-806fa56a21f4.png)
