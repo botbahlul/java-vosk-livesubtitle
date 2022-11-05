@@ -51,7 +51,7 @@ option -Dfile.encoding=UTF-8
 ```
 <img width="960" alt="jar2exe-set-utf-8" src="https://user-images.githubusercontent.com/88623122/200141423-3975325a-0afc-49db-a334-f8413b845f7a.png">
 
-click Apply, and Next to start compile
+click Apply and OK, then Next to start compile.
 
 The file java-vosk-livesubtitle.exe will be created on same folder of those jar filers (lib folder)
 
