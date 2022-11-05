@@ -45,7 +45,7 @@ Don't forget to check Create 64bits executivce to avoid libvosk dll errors
 
 Then click Config Internal to set additional compile parameter UTF-8 enconding
 
-Select Custom tab paste this code
+Select Custom tab and paste this code :
 ```
 option -Dfile.encoding=UTF-8
 ```
