@@ -1,0 +1,29 @@
+plugins {
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation fileTree(dir: 'src/main/java/libs', include: '*.jar')
+    implementation group: 'net.java.dev.jna', name: 'jna', version: '5.7.0'
+    implementation group: 'com.alphacephei', name: 'vosk', version: '0.3.38'
+}
+
+application {
+    mainClass = 'org.vosk.LiveSubtitle'
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'org.vosk.LiveSubtitle'
+        )
+    }
+
+ duplicatesStrategy = DuplicatesStrategy.INCLUDE
+ from { configurations.compileClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+
+}

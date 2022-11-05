@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="title" type="java.lang.String" value="VOSK LIVE SUBTITLE"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="mProgressBar" max="32767" attributes="0"/>
+                  <Component id="button_download_model" alignment="1" max="32767" attributes="0"/>
+                  <Component id="button_delete_model" alignment="1" max="32767" attributes="0"/>
+                  <Component id="textview_bytesdownloaded" alignment="0" max="32767" attributes="0"/>
+                  <Component id="textview_model_URL" alignment="0" max="32767" attributes="0"/>
+                  <Component id="textview_filesize" alignment="1" max="32767" attributes="0"/>
+                  <Component id="textview_model_used_path" alignment="0" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="label_translation_language" min="-2" pref="162" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="combobox_dst_language" pref="308" max="32767" attributes="0"/>
+                  </Group>
+                  <Component id="jScrollPane7" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jScrollPane6" alignment="1" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="label_audio_language" min="-2" pref="168" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="combobox_src_language" max="32767" attributes="0"/>
+                  </Group>
+                  <Component id="textview_debug" alignment="0" max="32767" attributes="0"/>
+                  <Component id="togglebutton_start" alignment="0" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="label_audio_language" alignment="0" max="32767" attributes="0"/>
+                  <Component id="combobox_src_language" alignment="0" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="button_delete_model" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="button_download_model" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="mProgressBar" min="-2" pref="6" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="textview_model_URL" min="-2" pref="25" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="textview_filesize" min="-2" pref="25" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="textview_bytesdownloaded" min="-2" pref="25" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="textview_model_used_path" min="-2" pref="25" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jScrollPane7" min="-2" pref="132" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="label_translation_language" alignment="0" max="32767" attributes="0"/>
+                  <Component id="combobox_dst_language" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jScrollPane6" min="-2" pref="132" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="togglebutton_start" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="textview_debug" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="152" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="label_translation_language">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Translation Language"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="combobox_src_language">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new DefaultComboBoxModel&lt;&gt;(arraylist_src_languages.toArray(new String[0]))" type="code"/>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="combobox_src_language.setSelectedIndex(arraylist_src_languages.indexOf(&quot;English&quot;));&#xa;&#xa;String src_language = combobox_src_language.getSelectedItem().toString();&#xa;LANGUAGE.SRC = map_src_language.get(src_language);&#xa;VOSK_MODEL.ISO_CODE = map_model_language.get(src_language);&#xa;VOSK_MODEL.URL_ADDRESS = map_language_models_URL.get(src_language);&#xa;VOSK_MODEL.FILENAME = VOSK_MODEL.URL_ADDRESS.substring(VOSK_MODEL.URL_ADDRESS.lastIndexOf(&apos;/&apos;) + 1, VOSK_MODEL.URL_ADDRESS.length());&#xa;VOSK_MODEL.COMPLETE_PATH = VOSK_MODEL.FILENAME;&#xa;VOSK_MODEL.EXTRACTED_PATH = &quot;models&quot; + file_separator;&#xa;VOSK_MODEL.USED_PATH = &quot;models&quot; + file_separator + VOSK_MODEL.ISO_CODE;&#xa;&#xa;check_vosk_model_download_status(VOSK_MODEL.ISO_CODE);&#xa;&#xa;"/>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="arraylist_models.add(&quot;ca-ES&quot;);&#xa;arraylist_models.add(&quot;zh-CN&quot;);&#xa;arraylist_models.add(&quot;cs-CZ&quot;);&#xa;arraylist_models.add(&quot;nl-NL&quot;);&#xa;arraylist_models.add(&quot;en-US&quot;);&#xa;arraylist_models.add(&quot;eo-EO&quot;);&#xa;arraylist_models.add(&quot;fr-FR&quot;);&#xa;arraylist_models.add(&quot;de-DE&quot;);&#xa;arraylist_models.add(&quot;hi-IN&quot;);&#xa;arraylist_models.add(&quot;it-IT&quot;);&#xa;arraylist_models.add(&quot;ja-JP&quot;);&#xa;arraylist_models.add(&quot;kk-KZ&quot;);&#xa;arraylist_models.add(&quot;fa-IR&quot;);&#xa;arraylist_models.add(&quot;pl-PL&quot;);&#xa;arraylist_models.add(&quot;pt-PT&quot;);&#xa;arraylist_models.add(&quot;ru-RU&quot;);&#xa;arraylist_models.add(&quot;es-ES&quot;);&#xa;arraylist_models.add(&quot;sv-SE&quot;);&#xa;arraylist_models.add(&quot;tr-TR&quot;);&#xa;arraylist_models.add(&quot;uk-UA&quot;);&#xa;arraylist_models.add(&quot;vi-VN&quot;);&#xa;&#xa;arraylist_models_URL.add(&quot;https://alphacephei.com/vosk/models/vosk-model-small-ca-0.4.zip&quot;);&#xa;arraylist_models_URL.add(&quot;https://alphacephei.com/vosk/models/vosk-model-small-cn-0.22.zip&quot;);&#xa;arraylist_models_URL.add(&quot;https://alphacephei.com/vosk/models/vosk-model-small-cs-0.4-rhasspy.zip&quot;);&#xa;arraylist_models_URL.add(&quot;https://alphacephei.com/vosk/models/vosk-model-small-nl-0.22.zip&quot;);&#xa;arraylist_models_URL.add(&quot;https://alphacephei.com/vosk/models/vosk-model-small-en-us-0.15.zip&quot;);&#xa;arraylist_models_URL.add(&quot;https://alphacephei.com/vosk/models/vosk-model-small-eo-0.42.zip&quot;);&#xa;arraylist_models_URL.add(&quot;https://alphacephei.com/vosk/models/vosk-model-small-fr-0.22.zip&quot;);&#xa;arraylist_models_URL.add(&quot;https://alphacephei.com/vosk/models/vosk-model-small-de-0.15.zip&quot;);&#xa;arraylist_models_URL.add(&quot;https://alphacephei.com/vosk/models/vosk-model-small-hi-0.22.zip&quot;);&#xa;arraylist_models_URL.add(&quot;https://alphacephei.com/vosk/models/vosk-model-small-it-0.22.zip&quot;);&#xa;arraylist_models_URL.add(&quot;https://alphacephei.com/vosk/models/vosk-model-small-ja-0.22.zip&quot;);&#xa;arraylist_models_URL.add(&quot;https://alphacephei.com/vosk/models/vosk-model-small-kz-0.15.zip&quot;);&#xa;arraylist_models_URL.add(&quot;https://alphacephei.com/vosk/models/vosk-model-small-fa-0.5.zip&quot;);&#xa;arraylist_models_URL.add(&quot;https://alphacephei.com/vosk/models/vosk-model-small-pl-0.22.zip&quot;);&#xa;arraylist_models_URL.add(&quot;https://alphacephei.com/vosk/models/vosk-model-small-pt-0.3.zip&quot;);&#xa;arraylist_models_URL.add(&quot;https://alphacephei.com/vosk/models/vosk-model-small-ru-0.22.zip&quot;);&#xa;arraylist_models_URL.add(&quot;https://alphacephei.com/vosk/models/vosk-model-small-es-0.42.zip&quot;);&#xa;arraylist_models_URL.add(&quot;https://alphacephei.com/vosk/models/vosk-model-small-sv-rhasspy-0.15.zip&quot;);&#xa;arraylist_models_URL.add(&quot;https://alphacephei.com/vosk/models/vosk-model-small-tr-0.3.zip&quot;);&#xa;arraylist_models_URL.add(&quot;https://alphacephei.com/vosk/models/vosk-model-small-uk-v3-small.zip&quot;);&#xa;arraylist_models_URL.add(&quot;https://alphacephei.com/vosk/models/vosk-model-small-vn-0.3.zip&quot;);&#xa;&#xa;arraylist_src.add(&quot;ca&quot;);&#xa;arraylist_src.add(&quot;zh&quot;);&#xa;arraylist_src.add(&quot;cs&quot;);&#xa;arraylist_src.add(&quot;nl&quot;);&#xa;arraylist_src.add(&quot;en&quot;);&#xa;arraylist_src.add(&quot;eo&quot;);&#xa;arraylist_src.add(&quot;fr&quot;);&#xa;arraylist_src.add(&quot;de&quot;);&#xa;arraylist_src.add(&quot;hi&quot;);&#xa;arraylist_src.add(&quot;it&quot;);&#xa;arraylist_src.add(&quot;ja&quot;);&#xa;arraylist_src.add(&quot;kk&quot;);&#xa;arraylist_src.add(&quot;fa&quot;);&#xa;arraylist_src.add(&quot;pl&quot;);&#xa;arraylist_src.add(&quot;pt&quot;);&#xa;arraylist_src.add(&quot;ru&quot;);&#xa;arraylist_src.add(&quot;es&quot;);&#xa;arraylist_src.add(&quot;sv&quot;);&#xa;arraylist_src.add(&quot;tr&quot;);&#xa;arraylist_src.add(&quot;uk&quot;);&#xa;arraylist_src.add(&quot;vi&quot;);&#xa;&#xa;arraylist_src_languages.add(&quot;Catalan&quot;);&#xa;arraylist_src_languages.add(&quot;Chinese&quot;);&#xa;arraylist_src_languages.add(&quot;Czech&quot;);&#xa;arraylist_src_languages.add(&quot;Dutch&quot;);&#xa;arraylist_src_languages.add(&quot;English&quot;);&#xa;arraylist_src_languages.add(&quot;Esperanto&quot;);&#xa;arraylist_src_languages.add(&quot;French&quot;);&#xa;arraylist_src_languages.add(&quot;German&quot;);&#xa;arraylist_src_languages.add(&quot;Hindi&quot;);&#xa;arraylist_src_languages.add(&quot;Italian&quot;);&#xa;arraylist_src_languages.add(&quot;Japanese&quot;);&#xa;arraylist_src_languages.add(&quot;Kazakh&quot;);&#xa;arraylist_src_languages.add(&quot;Persian&quot;);&#xa;arraylist_src_languages.add(&quot;Polish&quot;);&#xa;arraylist_src_languages.add(&quot;Portuguese&quot;);&#xa;arraylist_src_languages.add(&quot;Russian&quot;);&#xa;arraylist_src_languages.add(&quot;Spanish&quot;);&#xa;arraylist_src_languages.add(&quot;Swedish&quot;);&#xa;arraylist_src_languages.add(&quot;Turkish&quot;);&#xa;arraylist_src_languages.add(&quot;Ukrainian&quot;);&#xa;arraylist_src_languages.add(&quot;Vietnamese&quot;);&#xa;&#xa;for (int i = 0; i &lt; arraylist_src_languages.size(); i++) {&#xa;    map_model_language.put(arraylist_src_languages.get(i), arraylist_models.get(i));&#xa;}&#xa;&#xa;for (int i = 0; i &lt; arraylist_src_languages.size(); i++) {&#xa;    map_src_language.put(arraylist_src_languages.get(i), arraylist_src.get(i));&#xa;}&#xa;&#xa;for (int i = 0; i &lt; arraylist_src_languages.size(); i++) {&#xa;    map_language_models_URL.put(arraylist_src_languages.get(i), arraylist_models_URL.get(i));&#xa;}"/>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane6">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTextPane" name="textpane_translation_text">
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JLabel" name="label_audio_language">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Audio Language"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="combobox_dst_language">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new DefaultComboBoxModel&lt;&gt;(arraylist_dst_languages.toArray(new String[0]))" type="code"/>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="combobox_dst_language.setSelectedIndex(arraylist_dst_languages.indexOf(&quot;Indonesian&quot;));&#xa;&#xa;LANGUAGE.DST = map_dst_language.get(combobox_dst_language.getSelectedItem().toString());"/>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="arraylist_dst.add(&quot;af&quot;);&#xa;arraylist_dst.add(&quot;sq&quot;);&#xa;arraylist_dst.add(&quot;am&quot;);&#xa;arraylist_dst.add(&quot;ar&quot;);&#xa;arraylist_dst.add(&quot;hy&quot;);&#xa;arraylist_dst.add(&quot;as&quot;);&#xa;arraylist_dst.add(&quot;ay&quot;);&#xa;arraylist_dst.add(&quot;az&quot;);&#xa;arraylist_dst.add(&quot;bm&quot;);&#xa;arraylist_dst.add(&quot;eu&quot;);&#xa;arraylist_dst.add(&quot;be&quot;);&#xa;arraylist_dst.add(&quot;bn&quot;);&#xa;arraylist_dst.add(&quot;bho&quot;);&#xa;arraylist_dst.add(&quot;bs&quot;);&#xa;arraylist_dst.add(&quot;bg&quot;);&#xa;arraylist_dst.add(&quot;ca&quot;);&#xa;arraylist_dst.add(&quot;ceb&quot;);&#xa;arraylist_dst.add(&quot;ny&quot;);&#xa;arraylist_dst.add(&quot;zh-Hans&quot;);&#xa;arraylist_dst.add(&quot;zh-Hant&quot;);&#xa;arraylist_dst.add(&quot;co&quot;);&#xa;arraylist_dst.add(&quot;cr&quot;);&#xa;arraylist_dst.add(&quot;cs&quot;);&#xa;arraylist_dst.add(&quot;da&quot;);&#xa;arraylist_dst.add(&quot;dv&quot;);&#xa;arraylist_dst.add(&quot;nl&quot;);&#xa;arraylist_dst.add(&quot;doi&quot;);&#xa;arraylist_dst.add(&quot;en&quot;);&#xa;arraylist_dst.add(&quot;eo&quot;);&#xa;arraylist_dst.add(&quot;et&quot;);&#xa;arraylist_dst.add(&quot;ee&quot;);&#xa;arraylist_dst.add(&quot;fil&quot;);&#xa;arraylist_dst.add(&quot;fi&quot;);&#xa;arraylist_dst.add(&quot;fr&quot;);&#xa;arraylist_dst.add(&quot;fy&quot;);&#xa;arraylist_dst.add(&quot;gl&quot;);&#xa;arraylist_dst.add(&quot;ka&quot;);&#xa;arraylist_dst.add(&quot;de&quot;);&#xa;arraylist_dst.add(&quot;el&quot;);&#xa;arraylist_dst.add(&quot;gn&quot;);&#xa;arraylist_dst.add(&quot;gu&quot;);&#xa;arraylist_dst.add(&quot;ht&quot;);&#xa;arraylist_dst.add(&quot;ha&quot;);&#xa;arraylist_dst.add(&quot;haw&quot;);&#xa;arraylist_dst.add(&quot;he&quot;);&#xa;arraylist_dst.add(&quot;hi&quot;);&#xa;arraylist_dst.add(&quot;hmn&quot;);&#xa;arraylist_dst.add(&quot;hu&quot;);&#xa;arraylist_dst.add(&quot;is&quot;);&#xa;arraylist_dst.add(&quot;ig&quot;);&#xa;arraylist_dst.add(&quot;ilo&quot;);&#xa;arraylist_dst.add(&quot;id&quot;);&#xa;arraylist_dst.add(&quot;ga&quot;);&#xa;arraylist_dst.add(&quot;it&quot;);&#xa;arraylist_dst.add(&quot;ja&quot;);&#xa;arraylist_dst.add(&quot;jv&quot;);&#xa;arraylist_dst.add(&quot;kn&quot;);&#xa;arraylist_dst.add(&quot;kk&quot;);&#xa;arraylist_dst.add(&quot;km&quot;);&#xa;arraylist_dst.add(&quot;rw&quot;);&#xa;arraylist_dst.add(&quot;kok&quot;);&#xa;arraylist_dst.add(&quot;ko&quot;);&#xa;arraylist_dst.add(&quot;kri&quot;);&#xa;arraylist_dst.add(&quot;kmr&quot;);&#xa;arraylist_dst.add(&quot;ckb&quot;);&#xa;arraylist_dst.add(&quot;ky&quot;);&#xa;arraylist_dst.add(&quot;lo&quot;);&#xa;arraylist_dst.add(&quot;la&quot;);&#xa;arraylist_dst.add(&quot;lv&quot;);&#xa;arraylist_dst.add(&quot;ln&quot;);&#xa;arraylist_dst.add(&quot;lt&quot;);&#xa;arraylist_dst.add(&quot;lg&quot;);&#xa;arraylist_dst.add(&quot;lb&quot;);&#xa;arraylist_dst.add(&quot;mk&quot;);&#xa;arraylist_dst.add(&quot;mg&quot;);&#xa;arraylist_dst.add(&quot;ms&quot;);&#xa;arraylist_dst.add(&quot;ml&quot;);&#xa;arraylist_dst.add(&quot;mt&quot;);&#xa;arraylist_dst.add(&quot;mi&quot;);&#xa;arraylist_dst.add(&quot;mr&quot;);&#xa;arraylist_dst.add(&quot;mni&quot;);&#xa;arraylist_dst.add(&quot;lus&quot;);&#xa;arraylist_dst.add(&quot;mn&quot;);&#xa;arraylist_dst.add(&quot;mmr&quot;);&#xa;arraylist_dst.add(&quot;ne&quot;);&#xa;arraylist_dst.add(&quot;no&quot;);&#xa;arraylist_dst.add(&quot;or&quot;);&#xa;arraylist_dst.add(&quot;om&quot;);&#xa;arraylist_dst.add(&quot;ps&quot;);&#xa;arraylist_dst.add(&quot;fa&quot;);&#xa;arraylist_dst.add(&quot;pl&quot;);&#xa;arraylist_dst.add(&quot;pt&quot;);&#xa;arraylist_dst.add(&quot;pa&quot;);&#xa;arraylist_dst.add(&quot;qu&quot;);&#xa;arraylist_dst.add(&quot;ro&quot;);&#xa;arraylist_dst.add(&quot;ru&quot;);&#xa;arraylist_dst.add(&quot;sm&quot;);&#xa;arraylist_dst.add(&quot;sa&quot;);&#xa;arraylist_dst.add(&quot;gd&quot;);&#xa;arraylist_dst.add(&quot;nso&quot;);&#xa;arraylist_dst.add(&quot;sr&quot;);&#xa;arraylist_dst.add(&quot;st&quot;);&#xa;arraylist_dst.add(&quot;sn&quot;);&#xa;arraylist_dst.add(&quot;sd&quot;);&#xa;arraylist_dst.add(&quot;si&quot;);&#xa;arraylist_dst.add(&quot;sk&quot;);&#xa;arraylist_dst.add(&quot;sl&quot;);&#xa;arraylist_dst.add(&quot;so&quot;);&#xa;arraylist_dst.add(&quot;es&quot;);&#xa;arraylist_dst.add(&quot;su&quot;);&#xa;arraylist_dst.add(&quot;sw&quot;);&#xa;arraylist_dst.add(&quot;sv&quot;);&#xa;arraylist_dst.add(&quot;tg&quot;);&#xa;arraylist_dst.add(&quot;ta&quot;);&#xa;arraylist_dst.add(&quot;tt&quot;);&#xa;arraylist_dst.add(&quot;te&quot;);&#xa;arraylist_dst.add(&quot;th&quot;);&#xa;arraylist_dst.add(&quot;ti&quot;);&#xa;arraylist_dst.add(&quot;ts&quot;);&#xa;arraylist_dst.add(&quot;tr&quot;);&#xa;arraylist_dst.add(&quot;tk&quot;);&#xa;arraylist_dst.add(&quot;tw&quot;);&#xa;arraylist_dst.add(&quot;ug&quot;);&#xa;arraylist_dst.add(&quot;uk&quot;);&#xa;arraylist_dst.add(&quot;ur&quot;);&#xa;arraylist_dst.add(&quot;uz&quot;);&#xa;arraylist_dst.add(&quot;vi&quot;);&#xa;arraylist_dst.add(&quot;cy&quot;);&#xa;arraylist_dst.add(&quot;xh&quot;);&#xa;arraylist_dst.add(&quot;yi&quot;);&#xa;arraylist_dst.add(&quot;yo&quot;);&#xa;arraylist_dst.add(&quot;zu&quot;);&#xa;&#xa;arraylist_dst_languages.add(&quot;Afrikaans&quot;);&#xa;arraylist_dst_languages.add(&quot;Albanian&quot;);&#xa;arraylist_dst_languages.add(&quot;Amharic&quot;);&#xa;arraylist_dst_languages.add(&quot;Arabic&quot;);&#xa;arraylist_dst_languages.add(&quot;Armenian&quot;);&#xa;arraylist_dst_languages.add(&quot;Assamese&quot;);&#xa;arraylist_dst_languages.add(&quot;Aymara&quot;);&#xa;arraylist_dst_languages.add(&quot;Azerbaijani&quot;);&#xa;arraylist_dst_languages.add(&quot;Bambara&quot;);&#xa;arraylist_dst_languages.add(&quot;Basque&quot;);&#xa;arraylist_dst_languages.add(&quot;Belarusian&quot;);&#xa;arraylist_dst_languages.add(&quot;Bengali (Bangla)&quot;);&#xa;arraylist_dst_languages.add(&quot;Bhojpuri&quot;);&#xa;arraylist_dst_languages.add(&quot;Bosnian&quot;);&#xa;arraylist_dst_languages.add(&quot;Bulgarian&quot;);&#xa;arraylist_dst_languages.add(&quot;Catalan&quot;);&#xa;arraylist_dst_languages.add(&quot;Cebuano&quot;);&#xa;arraylist_dst_languages.add(&quot;Chichewa, Nyanja&quot;);&#xa;arraylist_dst_languages.add(&quot;Chinese (Simplified)&quot;);&#xa;arraylist_dst_languages.add(&quot;Chinese (Traditional)&quot;);&#xa;arraylist_dst_languages.add(&quot;Corsican&quot;);&#xa;arraylist_dst_languages.add(&quot;Croatian&quot;);&#xa;arraylist_dst_languages.add(&quot;Czech&quot;);&#xa;arraylist_dst_languages.add(&quot;Danish&quot;);&#xa;arraylist_dst_languages.add(&quot;Divehi, Maldivian&quot;);&#xa;arraylist_dst_languages.add(&quot;Dogri&quot;);&#xa;arraylist_dst_languages.add(&quot;Dutch&quot;);&#xa;arraylist_dst_languages.add(&quot;English&quot;);&#xa;arraylist_dst_languages.add(&quot;Esperanto&quot;);&#xa;arraylist_dst_languages.add(&quot;Estonian&quot;);&#xa;arraylist_dst_languages.add(&quot;Ewe&quot;);&#xa;arraylist_dst_languages.add(&quot;Filipino&quot;);&#xa;arraylist_dst_languages.add(&quot;Finnish&quot;);&#xa;arraylist_dst_languages.add(&quot;French&quot;);&#xa;arraylist_dst_languages.add(&quot;Frisian&quot;);&#xa;arraylist_dst_languages.add(&quot;Galician&quot;);&#xa;arraylist_dst_languages.add(&quot;Georgian&quot;);&#xa;arraylist_dst_languages.add(&quot;German&quot;);&#xa;arraylist_dst_languages.add(&quot;Greek&quot;);&#xa;arraylist_dst_languages.add(&quot;Guarani&quot;);&#xa;arraylist_dst_languages.add(&quot;Gujarati&quot;);&#xa;arraylist_dst_languages.add(&quot;Haitian Creole&quot;);&#xa;arraylist_dst_languages.add(&quot;Hausa&quot;);&#xa;arraylist_dst_languages.add(&quot;Hawaiian&quot;);&#xa;arraylist_dst_languages.add(&quot;Hebrew&quot;);&#xa;arraylist_dst_languages.add(&quot;Hindi&quot;);&#xa;arraylist_dst_languages.add(&quot;Hmong&quot;);&#xa;arraylist_dst_languages.add(&quot;Hungarian&quot;);&#xa;arraylist_dst_languages.add(&quot;Icelandic&quot;);&#xa;arraylist_dst_languages.add(&quot;Igbo&quot;);&#xa;arraylist_dst_languages.add(&quot;Ilocano&quot;);&#xa;arraylist_dst_languages.add(&quot;Indonesian&quot;);&#xa;arraylist_dst_languages.add(&quot;Irish&quot;);&#xa;arraylist_dst_languages.add(&quot;Italian&quot;);&#xa;arraylist_dst_languages.add(&quot;Japanese&quot;);&#xa;arraylist_dst_languages.add(&quot;Javanese&quot;);&#xa;arraylist_dst_languages.add(&quot;Kannada&quot;);&#xa;arraylist_dst_languages.add(&quot;Kazakh&quot;);&#xa;arraylist_dst_languages.add(&quot;Khmer&quot;);&#xa;arraylist_dst_languages.add(&quot;Kinyarwanda (Rwanda)&quot;);&#xa;arraylist_dst_languages.add(&quot;Konkani&quot;);&#xa;arraylist_dst_languages.add(&quot;Korean&quot;);&#xa;arraylist_dst_languages.add(&quot;Krio&quot;);&#xa;arraylist_dst_languages.add(&quot;Kurdish (Kurmanji)&quot;);&#xa;arraylist_dst_languages.add(&quot;Kurdish (Sorani)&quot;);&#xa;arraylist_dst_languages.add(&quot;Kyrgyz&quot;);&#xa;arraylist_dst_languages.add(&quot;Lao&quot;);&#xa;arraylist_dst_languages.add(&quot;Latin&quot;);&#xa;arraylist_dst_languages.add(&quot;Latvian (Lettish)&quot;);&#xa;arraylist_dst_languages.add(&quot;Lingala&quot;);&#xa;arraylist_dst_languages.add(&quot;Lithuanian&quot;);&#xa;arraylist_dst_languages.add(&quot;Luganda, Ganda&quot;);&#xa;arraylist_dst_languages.add(&quot;Luxembourgish&quot;);&#xa;arraylist_dst_languages.add(&quot;Macedonian&quot;);&#xa;arraylist_dst_languages.add(&quot;Malagasy&quot;);&#xa;arraylist_dst_languages.add(&quot;Malay&quot;);&#xa;arraylist_dst_languages.add(&quot;Malayalam&quot;);&#xa;arraylist_dst_languages.add(&quot;Maltese&quot;);&#xa;arraylist_dst_languages.add(&quot;Maori&quot;);&#xa;arraylist_dst_languages.add(&quot;Marathi&quot;);&#xa;arraylist_dst_languages.add(&quot;Meiteilon (Manipuri)&quot;);&#xa;arraylist_dst_languages.add(&quot;Mizo&quot;);&#xa;arraylist_dst_languages.add(&quot;Mongolian&quot;);&#xa;arraylist_dst_languages.add(&quot;Myanmar (Burmese)&quot;);&#xa;arraylist_dst_languages.add(&quot;Nepali&quot;);&#xa;arraylist_dst_languages.add(&quot;Norwegian&quot;);&#xa;arraylist_dst_languages.add(&quot;Oriya&quot;);&#xa;arraylist_dst_languages.add(&quot;Oromo (Afaan Oromo)&quot;);&#xa;arraylist_dst_languages.add(&quot;Pashto, Pushto&quot;);&#xa;arraylist_dst_languages.add(&quot;Persian (Farsi)&quot;);&#xa;arraylist_dst_languages.add(&quot;Polish&quot;);&#xa;arraylist_dst_languages.add(&quot;Portuguese&quot;);&#xa;arraylist_dst_languages.add(&quot;Punjabi (Eastern)&quot;);&#xa;arraylist_dst_languages.add(&quot;Quechua&quot;);&#xa;arraylist_dst_languages.add(&quot;Romanian, Moldavian&quot;);&#xa;arraylist_dst_languages.add(&quot;Russian&quot;);&#xa;arraylist_dst_languages.add(&quot;Samoan&quot;);&#xa;arraylist_dst_languages.add(&quot;Sanskrit&quot;);&#xa;arraylist_dst_languages.add(&quot;Scots Gaelic&quot;);&#xa;arraylist_dst_languages.add(&quot;Sepedi&quot;);&#xa;arraylist_dst_languages.add(&quot;Serbian&quot;);&#xa;arraylist_dst_languages.add(&quot;Sesotho&quot;);&#xa;arraylist_dst_languages.add(&quot;Shona&quot;);&#xa;arraylist_dst_languages.add(&quot;Sindhi&quot;);&#xa;arraylist_dst_languages.add(&quot;Sinhalese&quot;);&#xa;arraylist_dst_languages.add(&quot;Slovak&quot;);&#xa;arraylist_dst_languages.add(&quot;Slovenian&quot;);&#xa;arraylist_dst_languages.add(&quot;Somali&quot;);&#xa;arraylist_dst_languages.add(&quot;Spanish&quot;);&#xa;arraylist_dst_languages.add(&quot;Sundanese&quot;);&#xa;arraylist_dst_languages.add(&quot;Swahili (Kiswahili)&quot;);&#xa;arraylist_dst_languages.add(&quot;Swedish&quot;);&#xa;arraylist_dst_languages.add(&quot;Tajik&quot;);&#xa;arraylist_dst_languages.add(&quot;Tamil&quot;);&#xa;arraylist_dst_languages.add(&quot;Tatar&quot;);&#xa;arraylist_dst_languages.add(&quot;Telugu&quot;);&#xa;arraylist_dst_languages.add(&quot;Thai&quot;);&#xa;arraylist_dst_languages.add(&quot;Tigrinya&quot;);&#xa;arraylist_dst_languages.add(&quot;Tsonga&quot;);&#xa;arraylist_dst_languages.add(&quot;Turkish&quot;);&#xa;arraylist_dst_languages.add(&quot;Turkmen&quot;);&#xa;arraylist_dst_languages.add(&quot;Twi&quot;);&#xa;arraylist_dst_languages.add(&quot;Ukrainian&quot;);&#xa;arraylist_dst_languages.add(&quot;Urdu&quot;);&#xa;arraylist_dst_languages.add(&quot;Uyghur&quot;);&#xa;arraylist_dst_languages.add(&quot;Uzbek&quot;);&#xa;arraylist_dst_languages.add(&quot;Vietnamese&quot;);&#xa;arraylist_dst_languages.add(&quot;Welsh&quot;);&#xa;arraylist_dst_languages.add(&quot;Xhosa&quot;);&#xa;arraylist_dst_languages.add(&quot;Yiddish&quot;);&#xa;arraylist_dst_languages.add(&quot;Yoruba&quot;);&#xa;arraylist_dst_languages.add(&quot;Zulu&quot;);&#xa;&#xa;for (int i = 0; i &lt; arraylist_dst_languages.size(); i++) {&#xa;    map_dst_language.put(arraylist_dst_languages.get(i), arraylist_dst.get(i));&#xa;}&#xa;&#xa;"/>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane7">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTextPane" name="textpane_voice_text">
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JButton" name="button_download_model">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Download Model"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button_download_modelActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="button_delete_model">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Delete Model"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button_delete_modelActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JProgressBar" name="mProgressBar">
+    </Component>
+    <Component class="javax.swing.JLabel" name="textview_model_URL">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="&quot;Model URL=&quot; + VOSK_MODEL.URL_ADDRESS" type="code"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="textview_filesize">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="String.valueOf(VOSK_MODEL.FILESIZE) + &quot; bytes&quot;" type="code"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="textview_bytesdownloaded">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="[bytes received]"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="textview_model_used_path">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="&quot;Model used path=&quot; + VOSK_MODEL.USED_PATH" type="code"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="textview_debug">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="[debug messages]"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JToggleButton" name="togglebutton_start">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Start"/>
+      </Properties>
+    </Component>
+  </SubComponents>
+</Form>
