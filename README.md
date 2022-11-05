@@ -43,7 +43,7 @@ Add all other jar files in that lib folder except that java-vosk-livesubtitle.ja
 Don't forget to check Create 64bits executivce to avoid libvosk dll errors
 ![image](https://user-images.githubusercontent.com/88623122/200141628-c37bde19-573f-47d2-876e-b8d7e446a330.png)
 
-Then click Config Internal to set additional compile parameter UTF-8 enconding
+Then click Config Internal to set additional compile parameter UTF-8 enconding so you can see and translate Chinese and Japanese characters correctly.
 ![image](https://user-images.githubusercontent.com/88623122/200141910-90e65f0b-b20e-4382-acc2-810caf823e1c.png)
 
 Select Custom tab and paste this code :
