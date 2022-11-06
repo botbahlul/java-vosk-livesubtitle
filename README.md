@@ -2,6 +2,8 @@
 
 ### A java based desktop aplication that can RECOGNIZE any live streaming in 21 languages that supported by VOSK then TRANSLATE and display it as LIVE SUBTITLES
 
+https://user-images.githubusercontent.com/88623122/200159557-23b7789d-4788-445a-8f5f-93be889a2e14.mp4
+
 This app was develepoed with Apache Netbeans IDE 15 https://netbeans.apache.org/download/index.html
 
 The speech recognition part is using java vosk api https://github.com/alphacep/vosk-api/tree/master/java/lib/src/main/java/org/vosk
