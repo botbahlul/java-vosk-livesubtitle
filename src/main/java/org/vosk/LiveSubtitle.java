@@ -183,16 +183,16 @@ public class LiveSubtitle extends javax.swing.JFrame {
             });
             if (state == ItemEvent.SELECTED && VOSK_MODEL.DOWNLOADED) {
                 RECOGNIZING_STATUS.RECOGNIZING = true;
-                if (!VOSK_MODEL.DOWNLOADED) {
-                    textview_debug.setText("We need to download model first");
-                    togglebutton_start.setSelected(false);
-                }
                 if (TRANSLATION_TEXT.STRING.length()>0) tptw.setVisible(true);
                 togglebutton_start.setText("Stop");
                 togglebutton_start.setBackground(Color.red);
                 recognize_thread.start();
             } else {
                 RECOGNIZING_STATUS.RECOGNIZING = false;
+                if (!VOSK_MODEL.DOWNLOADED) {
+                    textview_debug.setText("We need to download model first");
+                    togglebutton_start.setSelected(false);
+                }
                 togglebutton_start.setText("Start");
                 togglebutton_start.setBackground(bgColor);
                 togglebutton_start.setForeground(fgColor);
