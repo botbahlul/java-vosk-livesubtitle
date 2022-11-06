@@ -1,6 +1,6 @@
 # java-vosk-livesubtitle
 
-### A java based desktop aplication that can RECOGNIZE any live streaming in 21 languages that supported by VOSK then TRANSLATE and display it as LIVE SUBTITLES
+### This is a java based desktop application that can RECOGNIZE any live streaming in 21 languages that supported by VOSK then TRANSLATE and display it as LIVE SUBTITLES
 
 https://user-images.githubusercontent.com/88623122/200159557-23b7789d-4788-445a-8f5f-93be889a2e14.mp4
 
