@@ -233,15 +233,19 @@ public class LiveSubtitle extends javax.swing.JFrame {
                         if (recognizer.acceptWaveForm(b, numBytesRead)) {
                             string_Result = ((((((recognizer.getResult().replace("text", "")).replace("{", "")).replace("}", "")).replace(":", "")).replace("partial", "")).replace("\"", "")).toLowerCase();
                             if (string_Result.length()>0) {
-                                textpane_voice_text.setText(string_Result);
+                                //textpane_voice_text.setText(string_Result);
+                                //textpane_voice_text.setSelectionEnd(textpane_voice_text.getText().length());
                             }
                         } else {
                             string_PartialResult = ((((((recognizer.getPartialResult().replace("text", "")).replace("{", "")).replace("}", "")).replace(":", "")).replace("partial", "")).replace("\"", "")).toLowerCase();
                             if (string_PartialResult.length()>0) {
-                                textpane_voice_text.setText(string_PartialResult);
+                                //textpane_voice_text.setText(string_PartialResult);
+                                //textpane_voice_text.setSelectionEnd(textpane_voice_text.getText().length());
                             }
                         }
                         VOICE_TEXT.STRING = string_Result + string_PartialResult;
+                        textpane_voice_text.setText(VOICE_TEXT.STRING);
+                        textpane_voice_text.setSelectionEnd(textpane_voice_text.getText().length());
                     }
                     /*String string_FinalResults = ((((((recognizer.getFinalResult().replace("text", "")).replace("{", "")).replace("}", "")).replace(":", "")).replace("partial", "")).replace("\"", "")).toLowerCase();
                     if (string_FinalResults.length()>0) {
