@@ -25,7 +25,8 @@ public class OverlayWindow extends javax.swing.JFrame {
         screenSize=Toolkit.getDefaultToolkit().getScreenSize();
         DISPLAY.WIDTH = screenSize.width;
         DISPLAY.HEIGHT = screenSize.height;
-        setSize((int) (0.75*DISPLAY.WIDTH), (int) (0.06*DISPLAY.HEIGHT));
+        //setSize((int) (0.75*DISPLAY.WIDTH), (int) (0.06*DISPLAY.HEIGHT));
+        setSize(960,64);
         frameSize=getSize();
         x = (int) ((screenSize.width-frameSize.width)/2);
         y = (int) (0.8*(screenSize.height-frameSize.height));
