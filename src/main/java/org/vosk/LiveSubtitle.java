@@ -70,7 +70,8 @@ public class LiveSubtitle extends javax.swing.JFrame {
     private final ArrayList<String> arraylist_dst_languages;
     private final Map<String, String> map_dst_language;
 
-    private OverlayTranslationWindow tptw = new OverlayTranslationWindow();;
+    //private OverlayTranslationWindow tptw = new OverlayTranslationWindow();
+    private OverlayWindow tptw = new OverlayWindow();
     private Thread recognize_thread;
     public String file_separator = System.getProperty("file.separator");
 
