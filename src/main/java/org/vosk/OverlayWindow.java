@@ -31,7 +31,7 @@ public class OverlayWindow extends javax.swing.JFrame {
         y = (int) (0.8*(screenSize.height-frameSize.height));
         setLocation(x, y);
 
-        DefaultCaret caret = (DefaultCaret)overlay_textpane_translation_text.getCaret();
+        DefaultCaret caret = (DefaultCaret)textpane_translation_text.getCaret();
         caret.setUpdatePolicy(DefaultCaret.OUT_BOTTOM);
         caret.setUpdatePolicy(DefaultCaret.ALWAYS_UPDATE);
     }
@@ -46,7 +46,7 @@ public class OverlayWindow extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        overlay_textpane_translation_text = new javax.swing.JTextArea();
+        textpane_translation_text = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAlwaysOnTop(true);
@@ -54,19 +54,19 @@ public class OverlayWindow extends javax.swing.JFrame {
         setUndecorated(true);
         setSize(new java.awt.Dimension(0, 0));
 
-        overlay_textpane_translation_text.setBackground(new Color(0,0,0,0));
-        overlay_textpane_translation_text.setColumns(20);
-        overlay_textpane_translation_text.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        overlay_textpane_translation_text.setForeground(new Color(187,187,0,255));
-        overlay_textpane_translation_text.setLineWrap(true);
-        overlay_textpane_translation_text.setRows(2);
-        overlay_textpane_translation_text.setWrapStyleWord(true);
-        overlay_textpane_translation_text.setBorder(javax.swing.BorderFactory.createEmptyBorder());
-        overlay_textpane_translation_text.setSelectedTextColor(new Color(187,187,0,255));
-        overlay_textpane_translation_text.setSelectionColor(new Color(0,0,0,160));
-        overlay_textpane_translation_text.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+        textpane_translation_text.setBackground(new Color(0,0,0,0));
+        textpane_translation_text.setColumns(20);
+        textpane_translation_text.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        textpane_translation_text.setForeground(new Color(187,187,0,255));
+        textpane_translation_text.setLineWrap(true);
+        textpane_translation_text.setRows(2);
+        textpane_translation_text.setWrapStyleWord(true);
+        textpane_translation_text.setBorder(javax.swing.BorderFactory.createEmptyBorder());
+        textpane_translation_text.setSelectedTextColor(new Color(187,187,0,255));
+        textpane_translation_text.setSelectionColor(new Color(0,0,0,160));
+        textpane_translation_text.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
-                overlay_textpane_translation_textMouseDragged(evt);
+                textpane_translation_textMouseDragged(evt);
             }
         });
 
@@ -76,14 +76,14 @@ public class OverlayWindow extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(overlay_textpane_translation_text)
+                .addComponent(textpane_translation_text)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(overlay_textpane_translation_text, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
+                .addComponent(textpane_translation_text, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -91,11 +91,11 @@ public class OverlayWindow extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void overlay_textpane_translation_textMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_overlay_textpane_translation_textMouseDragged
+    private void textpane_translation_textMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_textpane_translation_textMouseDragged
         int x = (int) (evt.getXOnScreen() - 0.5*getWidth());
         int y = (int) (evt.getYOnScreen() - 0.5*getHeight());
         setLocation(x, y);
-    }//GEN-LAST:event_overlay_textpane_translation_textMouseDragged
+    }//GEN-LAST:event_textpane_translation_textMouseDragged
 
     /**
      * @param args the command line arguments
@@ -126,6 +126,6 @@ public class OverlayWindow extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JTextArea overlay_textpane_translation_text;
+    public javax.swing.JTextArea textpane_translation_text;
     // End of variables declaration//GEN-END:variables
 }
