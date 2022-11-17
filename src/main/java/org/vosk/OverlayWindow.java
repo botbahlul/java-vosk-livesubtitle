@@ -70,7 +70,7 @@ public class OverlayWindow extends javax.swing.JFrame {
             }
         });
 
-        getContentPane().add(overlay_textpane_translation_text, BorderLayout.SOUTH);
+        getContentPane().add(textpane_translation_text, BorderLayout.SOUTH);
 
         pack();
         setLocationRelativeTo(null);
