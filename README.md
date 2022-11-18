@@ -8,7 +8,7 @@ This app was develepoed with Apache Netbeans IDE 15 https://netbeans.apache.org/
 
 The speech recognition part is using java vosk api https://github.com/alphacep/vosk-api/tree/master/java/lib/src/main/java/org/vosk
 
-The translation part is using self made GoogleTranslateTranslator class
+The translation part is using self made GoogleTranslator class
 
 If you want to build this source to an exe file, you will need jar2exe https://www.jar2exe.com/
 
