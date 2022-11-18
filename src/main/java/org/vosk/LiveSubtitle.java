@@ -28,9 +28,6 @@ import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.TargetDataLine;
 import javax.swing.DefaultComboBoxModel;
 import java.io.InputStream;
-import java.lang.reflect.InvocationTargetException;
-import java.util.concurrent.CompletableFuture;
-import javax.swing.SwingUtilities;
 import java.io.ByteArrayOutputStream;
 import java.net.URLEncoder;
 import org.apache.http.HttpResponse;
@@ -38,7 +35,6 @@ import org.apache.http.StatusLine;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONArray;
-import org.json.JSONException;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -70,10 +66,10 @@ public class LiveSubtitle extends javax.swing.JFrame {
     private final ArrayList<String> arraylist_dst_languages;
     private final Map<String, String> map_dst_language;
 
-    //private OverlayTranslationWindow tptw = new OverlayTranslationWindow();
     private OverlayWindow tptw = new OverlayWindow();
     private Thread recognize_thread;
     public String file_separator = System.getProperty("file.separator");
+    private GoogleTranslator translator = new GoogleTranslator();
 
     public LiveSubtitle() {
         this.arraylist_models = new ArrayList<>();
@@ -118,7 +114,17 @@ public class LiveSubtitle extends javax.swing.JFrame {
             @Override
             public void run() {
                 if (RECOGNIZING_STATUS.RECOGNIZING && VOICE_TEXT.STRING != null) {
-                    translate(VOICE_TEXT.STRING, LANGUAGE.SRC, LANGUAGE.DST);
+                    TRANSLATION_TEXT.STRING = translator.translate(VOICE_TEXT.STRING, LANGUAGE.SRC, LANGUAGE.DST);
+                    textpane_translation_text.setText(TRANSLATION_TEXT.STRING);
+                    textpane_translation_text.setSelectionEnd(textpane_translation_text.getText().length());
+                    tptw.setVisible(true);
+                    tptw.textpane_translation_text.setText(TRANSLATION_TEXT.STRING);
+                    tptw.textpane_translation_text.updateUI();
+                    tptw.textpane_translation_text.setSelectionEnd(tptw.textpane_translation_text.getText().length());
+                }
+                else {
+                    tptw.textpane_translation_text.setText("");
+                    tptw.setVisible(false);
                 }
             }
         },0,900);
@@ -261,44 +267,10 @@ public class LiveSubtitle extends javax.swing.JFrame {
             } catch (IOException ex) {
                 Logger.getLogger(LiveSubtitle.class.getName()).log(Level.SEVERE, null, ex);
             }
-        
         }
         else {
             if (microphone != null) microphone.close();
         }
-    }
-
-    public void translate(String t, String src, String dst) {
-        String r = "";
-        textview_debug.setText(r);
-        GoogleTranslateTranslator translate = new GoogleTranslateTranslator();
-        translate.setOnTranslationCompleteListener(new GoogleTranslateTranslator.OnTranslationCompleteListener() {
-            @Override
-            public void onStartTranslation() {}
-
-            @Override
-            public void onCompleted(String text) {
-                TRANSLATION_TEXT.STRING = text;
-                if (RECOGNIZING_STATUS.RECOGNIZING) {
-                    textpane_translation_text.setText(text);
-                    textpane_translation_text.setSelectionEnd(textpane_translation_text.getText().length());
-
-                    tptw.setVisible(true);
-                    tptw.textpane_translation_text.setText(text);
-                    tptw.textpane_translation_text.updateUI();
-                    tptw.textpane_translation_text.setSelectionEnd(tptw.textpane_translation_text.getText().length());
-                }
-                else {
-                    tptw.textpane_translation_text.setText("");
-                    tptw.setVisible(false);
-                }
-            }
-
-            @Override
-            public void onError(Exception e) {
-            }
-        });
-        translate.execute(t, src, dst);
     }
 
     public final int get_vosk_model_filesize(String models_URL) {
@@ -1023,10 +995,6 @@ public class LiveSubtitle extends javax.swing.JFrame {
             new Thread(() -> {
                 DownloadModel(VOSK_MODEL.URL_ADDRESS);
             }).start();
-
-        } else {
-            String msg = "Model has been downloaded, no need to download it again";
-            textview_debug.setText(msg);
         }
     }//GEN-LAST:event_button_download_modelActionPerformed
 
@@ -1161,118 +1129,59 @@ class LANGUAGE {
     public static String DST;
 }
 
+@SuppressWarnings("deprecation")
+class GoogleTranslator {
 
-abstract class AsyncTask <Params, Progress, Result> {
-    protected AsyncTask() {}
+	public GoogleTranslator() {}
 
-    protected abstract void onPreExecute();
-
-    protected abstract Result doInBackground(Params... params) ;
-
-    protected abstract void onProgressUpdate(Progress... progress) ;
-
-    protected abstract void onPostExecute(Result result) ;
-
-    /*final void  publishProgress(Progress... values) {
-        SwingUtilities.invokeLater(() -> this.onProgressUpdate(values) );
-    }*/
-
-    final AsyncTask<Params, Progress, Result> execute(Params... params) {
+	String translate(String text, String from, String to) {
+        String translatedText = "";
         try {
-            SwingUtilities.invokeAndWait( this::onPreExecute );
-        } catch (InvocationTargetException|InterruptedException e){
-        
-        }
+            String encodedText = URLEncoder.encode(text, "UTF-8");
+            String urlStr = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=" + from + "&tl=" + to + "&dt=t&q=" + encodedText;
 
-        CompletableFuture<Result> cf =  CompletableFuture.supplyAsync( () -> doInBackground(params) );
-
-        cf.thenAccept(this::onPostExecute);
-        return this;
-    }
-}
-
-
-class GoogleTranslateTranslator extends AsyncTask<String, String, String> {
-    private OnTranslationCompleteListener listener;
-    @Override
-    protected String doInBackground(String... strings) {
-        String str = "";
-        try {
-            String encode = URLEncoder.encode(((String[]) strings)[0], "utf-8");
-            String sb = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=" +
-                    ((String[]) strings)[1] +
-                    "&tl=" +
-                    ((String[]) strings)[2] +
-                    "&dt=t&q=" +
-                    encode;
-            HttpResponse execute = new DefaultHttpClient().execute(new HttpGet(sb));
+            @SuppressWarnings({ "resource" })
+            HttpResponse execute = new DefaultHttpClient().execute(new HttpGet(urlStr));
             StatusLine statusLine = execute.getStatusLine();
             if (statusLine.getStatusCode() == 200) {
                 String byteArrayOutputStream2;
-                try (ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream()) {
-                    execute.getEntity().writeTo(byteArrayOutputStream);
-                    byteArrayOutputStream2 = byteArrayOutputStream.toString();
-                }
-                JSONArray jSONArray;
-                jSONArray = new JSONArray(byteArrayOutputStream2).getJSONArray(0);
-                StringBuilder translation = new StringBuilder(str);
-                for (int i = 0; i < jSONArray.length(); i++) {
+		try (ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream()) {
+			execute.getEntity().writeTo(byteArrayOutputStream);
+			byteArrayOutputStream2 = byteArrayOutputStream.toString();
+		}
+		JSONArray jSONArray;
+		jSONArray = new JSONArray(byteArrayOutputStream2).getJSONArray(0);
+		StringBuilder translation = new StringBuilder("");
+		for (int i = 0; i < jSONArray.length(); i++) {
                     JSONArray jSONArray2 = jSONArray.getJSONArray(i);
                     translation.append(jSONArray2.get(0).toString());
-                }
-                return translation.toString();
+                    translatedText = translation.toString();
+		}
+		return translatedText;
             }
             execute.getEntity().getContent().close();
             throw new IOException(statusLine.getReasonPhrase());
-        } catch (IOException | IllegalStateException | JSONException e) {
+        } catch (Exception e) {
             //System.out.println("GoogleTranslateTranslator: " + e.getMessage());
             LiveSubtitle.textview_debug.setText("GoogleTranslateTranslator: " + e.getMessage());
-            listener.onError(e);
-            return str;
         }
-    }
-    @Override
-    protected void onPreExecute() {
-        listener.onStartTranslation();
-    }
-    @Override
-    protected void onPostExecute(String text) {
-        listener.onCompleted(text);
-        //System.out.println(text);
-    }
-
-    @Override
-    protected void onProgressUpdate(String... progress) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-    public interface OnTranslationCompleteListener{
-        void onStartTranslation();
-        void onCompleted(String text);
-        void onError(Exception e);
-    }
-    public void setOnTranslationCompleteListener(OnTranslationCompleteListener listener){
-        this.listener=listener;
-    }
+            return translatedText;
+     }
 }
 
-class GoogleClient5Translator extends AsyncTask<String, String, String> {
-    private OnTranslationCompleteListener listener;
+@SuppressWarnings("deprecation")
+class GoogleClient5Translator {
 
-    @Override
-    protected String doInBackground(String... strings) {
-        String[] strArr = (String[]) strings;
-        String str = "";
+	public GoogleClient5Translator() {}
+
+	String translate(String text, String from, String to) {
+        String translatedText = "";
         try {
-            String encode = URLEncoder.encode(strArr[0], "utf-8");
-            StringBuilder sb = new StringBuilder();
-            sb.append("https://clients5.google.com/translate_a/");
-            sb.append("single?dj=1&dt=t&dt=sp&dt=ld&dt=bd&client=dict-chrome-ex&sl=");
-            sb.append(((String[]) strings)[1]);
-            sb.append("&tl=");
-            sb.append(((String[]) strings)[2]);
-            sb.append("&q=");
-            sb.append(encode);
-            HttpResponse execute = new DefaultHttpClient().execute(new HttpGet(sb.toString()));
+            String encodedText = URLEncoder.encode(text, "UTF-8");
+            String urlStr = "https://clients5.google.com/translate_a/single?dj=1&dt=t&dt=sp&dt=ld&dt=bd&client=dict-chrome-ex&sl=" + from + "&tl=" + to + "&q=" + encodedText;
+ 
+            @SuppressWarnings({ "resource" })
+            HttpResponse execute = new DefaultHttpClient().execute(new HttpGet(urlStr));
             StatusLine statusLine = execute.getStatusLine();
             if (statusLine.getStatusCode() == 200) {
                 ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
@@ -1283,48 +1192,23 @@ class GoogleClient5Translator extends AsyncTask<String, String, String> {
                 JSONObject jo = new JSONObject(byteArrayOutputStream2);
                 JSONArray ja_sentences = jo.getJSONArray("sentences");
 
-                StringBuilder translation = new StringBuilder(str);
+                StringBuilder translation = new StringBuilder("");
                 for (int i = 0; i < ja_sentences.length(); i++) {
                     JSONObject jo_trans = ja_sentences.getJSONObject(i);
                     String str_trans = jo_trans.getString("trans");
                     translation.append(str_trans);
-                }
-                return translation.toString();
+                    translatedText = translation.toString();
+		}
+		return translatedText;
             }
             execute.getEntity().getContent().close();
             throw new IOException(statusLine.getReasonPhrase());
-        } catch (IOException | UnsupportedOperationException | JSONException e) {
-            //System.out.println("GoogleClient5Translator: " + e.getMessage());
-            LiveSubtitle.textview_debug.setText("GoogleClient5Translator: " + e.getMessage());
-            listener.onError(e);
-            return str;
+        } catch (Exception e) {
+            //System.out.println("GoogleTranslateTranslator: " + e.getMessage());
+            LiveSubtitle.textview_debug.setText("GoogleTranslateTranslator: " + e.getMessage());
         }
-    }
-
-    @Override
-    protected void onPreExecute() {
-        listener.onStartTranslation();
-    }
-
-    @Override
-    protected void onPostExecute(String text) {
-        listener.onCompleted(text);
-    }
-
-    @Override
-    protected void onProgressUpdate(String... progress) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public interface OnTranslationCompleteListener{
-        void onStartTranslation();
-        void onCompleted(String text);
-        void onError(Exception e);
-    }
-    public void setOnTranslationCompleteListener(OnTranslationCompleteListener listener){
-        this.listener=listener;
-    }
-
+        return translatedText;
+     }
 }
 
 class Decompress {
