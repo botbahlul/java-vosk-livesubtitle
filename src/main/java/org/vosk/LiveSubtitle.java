@@ -684,7 +684,7 @@ public class LiveSubtitle extends javax.swing.JFrame {
         arraylist_dst.add("mni");
         arraylist_dst.add("lus");
         arraylist_dst.add("mn");
-        arraylist_dst.add("mmr");
+        arraylist_dst.add("my");
         arraylist_dst.add("ne");
         arraylist_dst.add("no");
         arraylist_dst.add("or");
