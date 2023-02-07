@@ -26,7 +26,8 @@ public class OverlayWindow extends javax.swing.JFrame {
         DISPLAY.WIDTH = screenSize.width;
         DISPLAY.HEIGHT = screenSize.height;
         //setSize((int) (0.75*DISPLAY.WIDTH), (int) (0.06*DISPLAY.HEIGHT));
-        setSize(960,64);
+        //setSize(960,64);
+        setSize(1140,136);
         frameSize=getSize();
         x = (int) ((screenSize.width-frameSize.width)/2);
         y = (int) (0.8*(screenSize.height-frameSize.height));
@@ -35,6 +36,7 @@ public class OverlayWindow extends javax.swing.JFrame {
         DefaultCaret caret = (DefaultCaret)textpane_translation_text.getCaret();
         caret.setUpdatePolicy(DefaultCaret.OUT_BOTTOM);
         caret.setUpdatePolicy(DefaultCaret.ALWAYS_UPDATE);
+
     }
 
 
@@ -52,6 +54,7 @@ public class OverlayWindow extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAlwaysOnTop(true);
         setBackground(new Color(0, 0, 0, 0));
+        setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         setUndecorated(true);
         setSize(new java.awt.Dimension(0, 0));
 
@@ -63,6 +66,7 @@ public class OverlayWindow extends javax.swing.JFrame {
         textpane_translation_text.setRows(2);
         textpane_translation_text.setWrapStyleWord(true);
         textpane_translation_text.setBorder(javax.swing.BorderFactory.createEmptyBorder());
+        textpane_translation_text.setMinimumSize(new java.awt.Dimension(1140, 136));
         textpane_translation_text.setSelectedTextColor(new Color(187,187,0,255));
         textpane_translation_text.setSelectionColor(new Color(0,0,0,160));
         textpane_translation_text.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -71,7 +75,20 @@ public class OverlayWindow extends javax.swing.JFrame {
             }
         });
 
-        getContentPane().add(textpane_translation_text, BorderLayout.SOUTH);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(textpane_translation_text, javax.swing.GroupLayout.PREFERRED_SIZE, 1140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(textpane_translation_text, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
 
         pack();
         setLocationRelativeTo(null);

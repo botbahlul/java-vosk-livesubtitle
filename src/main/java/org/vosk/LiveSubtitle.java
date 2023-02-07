@@ -43,6 +43,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
+import javafx.scene.text.Font;
 import org.json.JSONObject;
 
 /**
@@ -167,9 +168,263 @@ public class LiveSubtitle extends javax.swing.JFrame {
             textview_debug.setText(r);
             if (evt.getStateChange() == ItemEvent.SELECTED) {
                 LANGUAGE.DST = map_dst_language.get(combobox_dst_language.getSelectedItem().toString());
+                LANGUAGE.DST_COUNTRY = combobox_dst_language.getSelectedItem().toString();
+
+                if ("Amharic".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Abyssinica SIL", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Abyssinica SIL", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Assamese".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", 0, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", 0, 24));
+                }
+                else if ("Azerbaijani".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Helvetica World Regular", 0, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Helvetica World Regular", 0, 24));
+                }
+                else if ("Bengali".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", 0, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", 0, 24));
+                }
+                else if ("Bhojpuri".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", 0, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", 0, 24));
+                }
+                else if ("Chinese (Simplified)".equals(LANGUAGE.DST_COUNTRY) || "Chinese (Traditional)".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Microsoft JhengHei", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Microsoft JhengHei", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Dhivehi".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("FreeSerif", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("FreeSerif", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Gujarati".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Hindi".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Japanese".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Microsoft JhengHei", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Microsoft JhengHei", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Kannada".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Khmer".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Leelawadee UI", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Leelawadee UI", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Konkani".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Korean".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Malgun Gothic", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Malgun Gothic", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Lao".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Leelawadee UI", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Leelawadee UI", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Malayalam".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Marathi".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Meiteilon (Manipuri)".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Myanmar (Burmese)".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Myanmar Text", 0, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Myanmar Text", 0, 24));
+                }
+                else if ("Nepali".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Odiya (Oriya)".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Punjabi".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Sanskrit".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Sinhala".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Tamil".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Telugu".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Thai".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Leelawadee UI", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Leelawadee UI", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Tigrinya".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Abyssinica SIL", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Abyssinica SIL", java.awt.Font.PLAIN, 24));
+                }
+
+
+
+                else {
+                    textpane_translation_text.setFont(new java.awt.Font("Segoe UI", 0, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Segoe UI", 0, 24));
+                }
+
+                if (!textpane_voice_text.getText().equals("")) {
+                    textpane_translation_text.setText(translator.translate(textpane_voice_text.getText(), LANGUAGE.SRC, LANGUAGE.DST));
+                    textpane_translation_text.setSelectionEnd(textpane_translation_text.getText().length());
+                }
+ 
+
             }
             else {
                 LANGUAGE.DST = map_dst_language.get(combobox_dst_language.getSelectedItem().toString());
+                LANGUAGE.DST_COUNTRY = combobox_dst_language.getSelectedItem().toString();
+
+                if ("Amharic".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Abyssinica SIL", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Abyssinica SIL", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Assamese".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", 0, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", 0, 24));
+                }
+                else if ("Azerbaijani".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Helvetica World Regular", 0, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Helvetica World Regular", 0, 24));
+                }
+                else if ("Bengali".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", 0, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", 0, 24));
+                }
+                else if ("Bhojpuri".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", 0, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", 0, 24));
+                }
+                else if ("Chinese (Simplified)".equals(LANGUAGE.DST_COUNTRY) || "Chinese (Traditional)".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Microsoft JhengHei", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Microsoft JhengHei", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Dhivehi".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("FreeSerif", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("FreeSerif", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Gujarati".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Hindi".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Japanese".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Microsoft JhengHei", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Microsoft JhengHei", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Kannada".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Khmer".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Leelawadee UI", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Leelawadee UI", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Konkani".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Korean".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Malgun Gothic", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Malgun Gothic", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Lao".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Leelawadee UI", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Leelawadee UI", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Malayalam".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Marathi".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Meiteilon (Manipuri)".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Myanmar (Burmese)".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Myanmar Text", 0, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Myanmar Text", 0, 24));
+                }
+                else if ("Nepali".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Odiya (Oriya)".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Punjabi".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Sanskrit".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Sinhala".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Tamil".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Telugu".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Nirmala UI", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Thai".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Leelawadee UI", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Leelawadee UI", java.awt.Font.PLAIN, 24));
+                }
+                else if ("Tigrinya".equals(LANGUAGE.DST_COUNTRY)) {
+                    textpane_translation_text.setFont(new java.awt.Font("Abyssinica SIL", java.awt.Font.PLAIN, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Abyssinica SIL", java.awt.Font.PLAIN, 24));
+                }
+
+
+
+                else {
+                    textpane_translation_text.setFont(new java.awt.Font("Segoe UI", 0, 12));
+                    tptw.textpane_translation_text.setFont(new java.awt.Font("Segoe UI", 0, 24));
+                }
+
+                if (!textpane_voice_text.getText().equals("")) {
+                    textpane_translation_text.setText(translator.translate(textpane_voice_text.getText(), LANGUAGE.SRC, LANGUAGE.DST));
+                    textpane_translation_text.setSelectionEnd(textpane_translation_text.getText().length());
+                }
             }
         }
     }
@@ -622,12 +877,12 @@ public class LiveSubtitle extends javax.swing.JFrame {
         arraylist_dst.add("zh-CN");
         arraylist_dst.add("zh-TW");
         arraylist_dst.add("co");
-        arraylist_dst.add("cr");
+        arraylist_dst.add("hr");
         arraylist_dst.add("cs");
         arraylist_dst.add("da");
         arraylist_dst.add("dv");
-        arraylist_dst.add("nl");
         arraylist_dst.add("doi");
+        arraylist_dst.add("nl");
         arraylist_dst.add("en");
         arraylist_dst.add("eo");
         arraylist_dst.add("et");
@@ -661,7 +916,7 @@ public class LiveSubtitle extends javax.swing.JFrame {
         arraylist_dst.add("kk");
         arraylist_dst.add("km");
         arraylist_dst.add("rw");
-        arraylist_dst.add("kok");
+        arraylist_dst.add("gom");
         arraylist_dst.add("ko");
         arraylist_dst.add("kri");
         arraylist_dst.add("kmr");
@@ -681,7 +936,7 @@ public class LiveSubtitle extends javax.swing.JFrame {
         arraylist_dst.add("mt");
         arraylist_dst.add("mi");
         arraylist_dst.add("mr");
-        arraylist_dst.add("mni");
+        arraylist_dst.add("mni-Mtei");
         arraylist_dst.add("lus");
         arraylist_dst.add("mn");
         arraylist_dst.add("my");
@@ -723,9 +978,9 @@ public class LiveSubtitle extends javax.swing.JFrame {
         arraylist_dst.add("tr");
         arraylist_dst.add("tk");
         arraylist_dst.add("tw");
-        arraylist_dst.add("ug");
         arraylist_dst.add("uk");
         arraylist_dst.add("ur");
+        arraylist_dst.add("ug");
         arraylist_dst.add("uz");
         arraylist_dst.add("vi");
         arraylist_dst.add("cy");
@@ -820,7 +1075,7 @@ public class LiveSubtitle extends javax.swing.JFrame {
         arraylist_dst_languages.add("Myanmar (Burmese)");
         arraylist_dst_languages.add("Nepali");
         arraylist_dst_languages.add("Norwegian");
-        arraylist_dst_languages.add("Oriya");
+        arraylist_dst_languages.add("Odiya (Oriya)");
         arraylist_dst_languages.add("Oromo");
         arraylist_dst_languages.add("Pashto");
         arraylist_dst_languages.add("Persian");
@@ -838,7 +1093,7 @@ public class LiveSubtitle extends javax.swing.JFrame {
         arraylist_dst_languages.add("Sesotho");
         arraylist_dst_languages.add("Shona");
         arraylist_dst_languages.add("Sindhi");
-        arraylist_dst_languages.add("Sinhalese");
+        arraylist_dst_languages.add("Sinhala");
         arraylist_dst_languages.add("Slovak");
         arraylist_dst_languages.add("Slovenian");
         arraylist_dst_languages.add("Somali");
@@ -870,11 +1125,11 @@ public class LiveSubtitle extends javax.swing.JFrame {
         for (int i = 0; i < arraylist_dst_languages.size(); i++) {
             map_dst_language.put(arraylist_dst_languages.get(i), arraylist_dst.get(i));
         }
-
         combobox_dst_language.setModel(new DefaultComboBoxModel<>(arraylist_dst_languages.toArray(new String[0])));
         combobox_dst_language.setSelectedIndex(arraylist_dst_languages.indexOf("Indonesian"));
 
         LANGUAGE.DST = map_dst_language.get(combobox_dst_language.getSelectedItem().toString());
+        LANGUAGE.DST_COUNTRY = combobox_dst_language.getSelectedItem().toString();
 
         jScrollPane7.setViewportView(textpane_voice_text);
 
@@ -1126,7 +1381,9 @@ class VOSK_MODEL {
 
 class LANGUAGE {
     public static String SRC;
+    public static String SRC_COUNTRY;
     public static String DST;
+    public static String DST_COUNTRY;
 }
 
 @SuppressWarnings("deprecation")
@@ -1241,7 +1498,7 @@ class Decompress {
                         BufferedInputStream in = new BufferedInputStream(zin);
                         BufferedOutputStream out;
                         out = new BufferedOutputStream(fout);
-                        
+
                         int n;
                         while ((n = in.read(b,0,1024)) >= 0) {
                             out.write(b,0,n);
