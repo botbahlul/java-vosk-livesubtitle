@@ -4,7 +4,7 @@
 
 https://user-images.githubusercontent.com/88623122/200159557-23b7789d-4788-445a-8f5f-93be889a2e14.mp4
 
-This app was develepoed with Apache Netbeans IDE 15 https://netbeans.apache.org/download/index.html which using SWING as its GUI framework.
+This app was develepoed with Apache Netbeans IDE 15 https://netbeans.apache.org/download/index.html which using Oracle JRE v1.8.0_351 and SWING as its GUI framework.
 
 The speech recognition part is using java vosk api https://github.com/alphacep/vosk-api/tree/master/java/lib/src/main/java/org/vosk
 
@@ -60,7 +60,7 @@ The file java-vosk-livesubtitle.exe will be created on same folder of those jar 
 
 Now you can run this app in one single click.
 
-Don't forget to put that models folder in the same folder with java-vosk-livesubtitle.exe!
+Don't forget to put that models folder into same folder with java-vosk-livesubtitle.exe and also don't forget to extract those fonts I've included in compressed zip release file into C:\Windows\Fonts\ folder!
 
 As usual for best recognizing quality, on windows you will need STEREO MIX or VIRTUAL AUDIO CABLE as RECORDING/INPUT DEVICE 
 ![image](https://user-images.githubusercontent.com/88623122/199527559-e2609d8c-3479-420d-8c52-806fa56a21f4.png)
