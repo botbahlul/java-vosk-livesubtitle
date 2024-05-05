@@ -75,3 +75,5 @@ and on linux you willl need PAVUCONTROL (by choosing MONITOR of your audio devic
 MIT
 
 Check my other SPEECH RECOGNITIION + TRANSLATE PROJECTS https://github.com/botbahlul?tab=repositories
+
+Buy me coffee : https://sociabuzz.com/botbahlul/tribe
